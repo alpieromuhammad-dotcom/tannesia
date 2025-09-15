@@ -1,0 +1,380 @@
+body {
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding-top: 70px;
+}
+
+/* Navbar Custom */
+.navbar-custom {
+  background: rgba(76, 175, 80, 0.8); /* hijau daun semi transparan */
+  backdrop-filter: blur(10px); /* efek blur glassmorphism */
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.8rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1030; /* pastikan di atas konten lain */
+}
+
+/* Navbar Custom - samakan dengan footer */
+.navbar-custom {
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0.8rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1030; /* pastikan di atas konten lain */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animasi gradien background (sama dengan footer) */
+@keyframes gradientBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Navbar Brand */
+.navbar-custom .navbar-brand {
+  color: #f0f0f0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #00ff99; /* aksen hijau neon */
+}
+
+/* Navbar Links */
+.navbar-custom .nav-link {
+  color: #a0f0c0;
+  font-weight: 600;
+  margin-right: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #00ff99; /* hijau neon */
+  transform: scale(1.1);
+}
+
+/* Navbar Toggler (hamburger) */
+.navbar-custom .navbar-toggler {
+  border: none;
+  outline: none;
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.navbar-custom .navbar-toggler:hover {
+  filter: brightness(120%);
+}
+
+/* Navbar Toggler Icon */
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  filter: invert(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-custom .nav-link {
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Logo bulat */
+.navbar-brand img {
+  border-radius: 50%;
+  object-fit: cover; /* biar rapi meski logo bukan kotak */
+}
+
+
+
+/* Hero / About Us (Header Section) */
+.hero-section {
+  background: url("nanas.jpg") center center no-repeat;
+  background-size: 100% 100%; /* gambar tidak ke-zoom */
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 0, 100, 0.5); /* overlay ungu transparan */
+  z-index: 0;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: left; /* semua teks sejajar kiri */
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.btn-learn {
+  border-radius: 40px;
+  padding: 10px 30px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+}
+
+/* About Us Section */
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #155724;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+}
+
+
+
+/* Foto About Us */
+.about-section img {
+  width: 100%;
+  max-width: 500px;   /* batas maksimal */
+  height: 350px;      /* tinggi seragam */
+  object-fit: cover;  /* biar gambar rapi tanpa distorsi */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Products Section */
+.products-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #155724;
+  letter-spacing: 0.05em;
+}
+
+.product-card {
+  border: 1px solid #28a745;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(40, 167, 69, 0.15);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+.product-image {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #28a745;
+}
+
+.footer {
+  background-color: #1c1f23;
+}
+
+.footer h4, 
+.footer h5 {
+  font-weight: 600;
+}
+
+.footer p, 
+.footer li {
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+.footer-link {
+  color: #1da1f2;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer i {
+  width: 20px; /* supaya ikon sejajar */
+  text-align: center;
+}/* Background gradient animasi */
+.footer {
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* Animasi gradien background */
+@keyframes gradientBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Judul footer */
+.footer-title {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Underline animasi pada judul */
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background: #00ff99;
+  border-radius: 2px;
+  animation: underlineMove 2s linear infinite;
+}
+
+@keyframes underlineMove {
+  0% {transform: translateX(0);}
+  50% {transform: translateX(20px);}
+  100% {transform: translateX(0);}
+}
+
+/* Animasi ikon berdenyut */
+.icon-animate {
+  display: inline-block;
+  animation: pulseIcon 2.5s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); color: inherit; }
+  50% { transform: scale(1.2); color: #00ff99; }
+}
+
+/* Hover efek pada link */
+.footer-link {
+  color: #a0f0c0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #00ff99;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00ff99;
+  transform: translateX(5px);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* List kontak */
+.footer-contact-list {
+  padding-left: 0;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+  color: #00ff99;
+}
+
+/* Alamat kiri */
+.footer-address {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c0f0d0;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #7f9f8f;
+  letter-spacing: 1px;
+  font-style: italic;
+  user-select: none;
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  .contact-item {
+    font-size: 1rem;
+  }
+}
+
